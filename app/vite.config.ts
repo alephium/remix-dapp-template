@@ -21,4 +21,7 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  define: {
+    'process.env.ALPH_PUBLIC_NETWORK': JSON.stringify(process.env.ALPH_PUBLIC_NETWORK),
+  },
 });

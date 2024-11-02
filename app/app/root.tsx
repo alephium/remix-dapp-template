@@ -7,7 +7,9 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
-import "./tailwind.css";
+import "./styles/globals.css";
+import { AlephiumWalletProvider } from '@alephium/web3-react';
+import { tokenFaucetConfig } from './services/utils';
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -32,7 +34,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <AlephiumWalletProvider theme="web95" network={tokenFaucetConfig.network} addressGroup={tokenFaucetConfig.groupIndex}>
+          {children}
+        </AlephiumWalletProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

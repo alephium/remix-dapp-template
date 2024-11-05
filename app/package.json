@@ -12,8 +12,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@alephium/web3": "^1.8.2",
-    "@alephium/web3-react": "^1.8.2",
+    "@alephium/web3": "^1.8.5",
+    "@alephium/web3-react": "^1.8.5",
     "my-contracts": "0.1.0",
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",
